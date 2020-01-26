@@ -1,0 +1,8 @@
+# program binaries
+*.out
+
+# garbage files
+*.txt
+
+# saved garbage folder
+garbage_files/
