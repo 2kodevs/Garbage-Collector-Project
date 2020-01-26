@@ -1,0 +1,40 @@
+Proyecto de PM2
+
+Integrantes:
+    Lazaro Raul Iglesias Vera
+    Miguel Tenorio Potrony
+
+Informacion:
+    funciones de movimiento:
+        ->  fdm-bfs: Como su nombre indica se usa bfs
+                     con el objetivo de hallar la basura
+                     mas cercana.
+        ->  fdm-regions: Tambien usa bfs, pero en esta
+                         estrategia se divide el tablero
+                         en regiones de 5x5 y se halla la
+                         densidad de basura en cada una de
+                         las regiones, para luego hallar la
+                         region mas densa menos alejada del
+                         robot, a la cual enviamos al robot
+                         tratando de recoger la mayor cantidad 
+                         de basura en su camino. Una vez en la
+                         region antes mencionada toda la basura
+                         en ella es recogida.
+        
+    generador de basura:
+        GarbageGenerator:
+            recibe como parametro un nombre y crea un archivo, o
+            los sobreescribe, si este existe, con basuras aleatorias
+
+    otras notas:
+        Makefile:
+            -> new: Crea nueva basura en un archivo garbage.dat por defecto
+                    esto es modificable ej: make new g="mi basura.dat"
+            -> run: Ejecuta el bin.out con los valores por defecto
+                    de garbageTable.dat, move.so. Estos parametros son
+                    modificables ej: make run t="mi basura.dat" f="mi fdm.so"
+            -> build: Compila el el main en bin.out
+            -> so(name): crea un move.so a partir de un .c con el siguiente
+                         formato: fdm(name).c NOTA: no poner los parentesis
+        
+
